@@ -1,6 +1,11 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-YOUTUBE_API_KEY = "AIzaSyCp_zVCVZ9Nx57dNVGk0DYo-3RGJPeQ8dY"
+load_dotenv()
+
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+
 YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search"
 
 def search_youtube_ost(game_title):
